@@ -21,19 +21,14 @@
                 var  number =  parseInt(document.getElementById("getNumber").value);
                 var logo = document.getElementById("getLogo").value;
                 // Processing & Calculations
-                var outText; 
+                var outText = "The cost of your jerseys is "; 
                 var cost;
+                
+                
                 
                 if (type === "polo")
                 {
-                    if (logo === "Y")
-                    {
-                        cost = number * 22.50 + (number * 1.50) + "Warning:Long shipping date";
-                    }
-                    else
-                    {
-                        cost = number * 22.50;
-                    }
+                    cost = number * 22.50;
                 }
                 else if (type === "short")
                 {
@@ -43,6 +38,7 @@
                 {
                     cost = number * 28.50;
                 }
+                
                 if (logo === "Y")
                 {
                     cost = cost + (number * 1.50);
@@ -52,9 +48,25 @@
                     cost = cost;
                 }
                 
+                if (cost > 250)
+                {
+                    cost = 250 + ((cost - 250)*0.85) ;
+                }
                 
-                outText = "The cost of your jerseys is " + cost;
-
+                if (logo === "Y" && type === "polo")
+                {
+                    cost = cost + " Warning: expect longer shipping time.";
+                }
+                
+                if (cost > 100 && cost < 500)
+                {
+                    outText = outText + cost;
+                }
+                else
+                {
+                    outText = "Invalid selection: Orders must be between 100 and 500";
+                }
+         
                 // 1. Display Output on webpage (in a textarea element)
                  document.getElementById("results").value = outText;
 
