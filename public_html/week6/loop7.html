@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>
+          loop7
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function displayDetails()
+            {
+                
+               
+               
+                // Processing & Calculations
+                
+                
+                var outText = 0;
+                var i;
+                for (i = 1; i <= 20; i = i + 1)
+                {
+                    outText = outText + i;
+                }
+
+                // 1. Display Output on webpage (in a textarea element)
+                 document.getElementById("results").value = outText;
+
+                // 2. Display output using alert box
+               // alert(outputText);
+            }
+
+        </script>
+    </head>
+    
+    <body>
+       
+               
+        <button onclick="displayDetails()" >Click to see results below</button>
+        <br> <br>
+
+        Results:
+        <br>
+        <textarea id="results" rows="4" cols="50" readonly >
+        </textarea>
+
+    </body>
+</html>
+
+
+

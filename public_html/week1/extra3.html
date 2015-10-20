@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+please enter total money
+
+-->
+<html>
+    <head>
+        <title>Coin calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            function calcCoins(){
+                var money = parseFloat(document.getElementById("getValue").value);
+                var cents = money * 100;
+                var euros = (cents / 100) - (cents % 100);
+                var output = euros;
+                
+        
+        
+                document.getElementById("outputValue").value = output        
+            }
+        </script>
+        <h1>Please enter total value here.</h1>
+        <input id="getValue"/>
+        <br> <br>
+        <button onclick ="calcCoins()"> Click here </button>  
+        <br> <br>
+        <textarea id="outputValue"></textarea>
+    </body>
+</html>

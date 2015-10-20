@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Total pay</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            
+            function getTotal()
+            {
+              var hours = ParseInt(document.getElementById("getHours").value);
+              
+              var ordPay = parseFloat(document.getElementById("getPay").value);
+              
+              var otPay = ordPay * 2;
+              
+              var total = hours * ordPay;
+              
+              if(hours <= 40)
+              {
+               total =hours * ordPay; 
+              }
+              
+              else(hours>40)
+              {
+                  
+              }
+            }
+        </script>
+        <h1>How much is your wage?</h1>
+        <br><br>
+        
+        <p>Please type the number of hours and your pay per hour.</p>
+        <br><br>
+        
+        <input id = "getHours">enter your hours
+        <br><br>
+        
+        <input id ="getPay">enter your pay rate
+        <br><br>
+        
+        <button id ="getTotal()">Click here for total</button>
+    </body>
+</html>

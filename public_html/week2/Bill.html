@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bill</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            
+       
+    </head>
+    
+    <body>
+        <script>
+            "use strict";
+            function calculateBill()
+            {
+                var bill = parseFloat(document.getElementById("getTotal").value);
+                
+                var minTip = 2.00;
+       
+                if (bill >= minTip)
+                {
+                  document.getElementById("outputArea").innerHTML = "Your bill with tip is: €" + bill * 1.15;
+                  //alert("This Works");
+                }
+                else
+                {
+                  document.getElementById("outputArea").innerHTML = "your bill no tip is: €" + bill;
+                }
+            }
+        </script>
+        <h1>Receipt calculator</h1>
+        <br><br>
+        
+        <h2>Type your bill here</h2>
+        <br><br>
+        
+        <input id ="getTotal"/>
+        <br><br>
+        
+        <button onClick ="calculateBill()">Click to see your results</button>
+        
+        <h1 id = "outputArea">Your bill goes here.</h1>
+   </body>
+</html>

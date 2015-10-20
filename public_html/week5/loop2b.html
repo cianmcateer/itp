@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>
+          loop2b
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function displayDetails()
+            {
+                // Get Input from webpage
+                
+                var outText = "";
+                var i;
+                
+                // Processing & Calculations
+                for (i = 0; i <= 77; i = i + 2)
+                {
+                    outText = outText + i + "\n";    
+                }
+                
+                // 1. Display Output on webpage (in a textarea element)
+                 document.getElementById("results").value = outText;
+
+                // 2. Display output using alert box
+               // alert(outputText);
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        <h1>0 to 77 (even numbers) loop</h1>
+        <button onclick="displayDetails()" >Click to see results below</button>
+        <br> <br>
+
+        Results:
+        <br>
+        <textarea id="results" rows="4" cols="50" readonly >
+        </textarea>
+
+    </body>
+</html>
+
+

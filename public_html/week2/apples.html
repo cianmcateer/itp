@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Apples change calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            function calcChange()
+            {
+                var cash = parseInt(document.getElementById("getCash").value);
+                
+                var weight = parseInt(document.getElementById("getWeight").value);
+                
+                var cost = weight * 0.75;
+              
+                if(cash > cost)
+                {
+                    alert ("your change is €" + (cash-cost));
+                }
+                else if(cash < cost)
+                {
+                   alert ("you need €" + (cost-cash)); 
+                }
+                    
+            }
+                
+                
+            
+            
+        </script>
+        <h1>Apples change calculator</h1>
+        <br><br>
+        
+        <h2>Please enter your kilos and cash here</h2>
+        <br><br>
+        
+        <input id ="getWeight">weight
+        
+        <input id ="getCash">cash
+        
+        
+        <button onClick = "calcChange()">Click here</button>
+           
+    </body>
+</html>

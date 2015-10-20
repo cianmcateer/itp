@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>
+            Input - Output
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function displayBalance()
+            {
+                // Get Input from webpage
+                var mansionValue = parseInt(document.getElementById("getMansionValue").value);
+                var carValue = parseInt(document.getElementById("getCarValue").value);
+                var winnings = 3500000;
+
+                //Processing/Calculations
+                var outputText = winnings - mansionValue - carValue;
+                // 1. Display Output on webpage (in a textarea element)
+                 document.getElementById("finalBalance").value = outputText;
+
+                // 2. Display output using alert box
+                //alert(outputText);
+            }
+
+        </script>
+    </head>
+
+
+
+    <body>
+        <h1>Congratulations! You have just won the lottery!</h1>
+        <h3>You have €3500000 to spend!</h3>
+        How much would you spend on your new mansion?
+        <input id="getMansionValue" />
+        <br> <br>
+
+        How about your new car?
+        <input id="getCarValue" />
+        <br> <br>
+
+        
+        
+        <button onclick="displayBalance()" >Click to see how much is left</button>
+        <br> <br>
+
+        Results:
+        <br>
+        <textarea id="finalBalance" rows="4" cols="50" readonly >
+        </textarea>
+
+    </body>
+</html>

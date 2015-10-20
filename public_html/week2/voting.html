@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>vote</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+        "use strict";
+        function calculateEligibility()
+        {
+            var age = document.getElementById("getAge").value;
+            
+            var minAge = 18;
+            
+            if(age >= minAge)
+            {            
+                alert("You are eligible");
+                //document.getElementById("outputArea")
+            }
+            else
+            {
+                alert("Sorry, maybe next year");
+            }    
+        }
+        </script>
+        
+        <h1>Are you ready to vote?</h1>
+        <br><br>
+        
+        <h2>Enter your age here.</h2>
+        <br><br>
+        
+        <input id = "getAge"/>
+        <br><br>
+    
+        <button onClick ="calculateEligibility()">Click here!</button>
+        <br><br>
+    
+    <h1 id="outputArea"></h1>
+        
+    </body>
+</html>

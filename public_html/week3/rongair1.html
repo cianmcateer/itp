@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Rongair1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            function calcCost()
+            {
+                var ticket = 35;
+                
+                var number = parseInt(document.getElementById("getTotal").value);
+                
+                var total = 35 * number;
+                
+                var outputText;
+                
+                outputText="your ticket/s cost €"+total+" enjoy your stay.";
+                
+                document.getElementById("totalCost").value=outputText;
+                
+                
+                
+                
+            }
+        </script>
+        <h1>Ticket calculator</h1>
+        <br>
+        
+        <p>Please enter the number of tickets you require</p>
+        
+        <input id="getTotal"/>
+        <br>
+        
+        <button onClick="calcCost()">Click here</button>
+        
+        <textarea id="totalCost" rows="4" cols="50" readonly></textarea>
+    </body>
+</html>

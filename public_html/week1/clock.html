@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Game show clock</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+         "use strict";
+         
+         function secondsCalculator()
+         {
+             var hours = parseInt(document.getElementById("getHours").value);
+             
+             var minutes = parseInt(document.getElementById("getMinutes").value);
+             
+             var seconds = parseInt(document.getElementById("getSeconds").value);
+             
+             var convertHours = hours * 60 * 60;
+             
+             var convertMinutes = minutes * 60;
+             
+             var total = convertHours + convertMinutes + seconds;
+             
+             var output = "The number of seconds remaining is " + total + ".";
+             
+             document.getElementById("secondsRemaining").value = output;
+         }
+        </script>
+        <h1>Please enter the hours,minutes and seconds into the boxes below.</h1>
+        
+        
+        <h3>Please enter your hours here.</h3>
+        <br>
+        
+        <input id = "getHours"/>
+        <br>
+        
+        <h3>Please enter your minutes here.</h3>
+        <br>
+        
+        <input id = "getMinutes"/>
+        <br>
+        
+        <h3>Please enter your seconds here.</h3>
+        <br>
+        
+        <input id = "getSeconds"/>
+        <br><br>
+        
+        
+        <button onclick ="secondsCalculator()"> calculate seconds remaining</button>
+        
+        <h3>Total seconds remaining.</h3>
+        
+        <textarea id="secondsRemaining" rows="2" cols="60" readonly></textarea>
+    </body>
+</html>

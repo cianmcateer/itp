@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Golf</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            
+            function calculatePar(){
+                var roryScore = 271;
+                
+                var roryPar = 17;
+                
+                var coursePar = (roryScore + roryPar) / 4;
+                
+                document.getElementById("totalPar").value = coursePar;
+                
+            }
+            function averageRound() 
+            {   
+            var roryScore = 271;
+            
+            var numRounds = 4;
+            
+            var averageScore = roryScore / numRounds;
+            
+            document.getElementById("average").value = averageScore;
+            }
+            
+            function calculateUnderPar(){
+                var numRounds = 4;
+                
+                var underPar = 17;
+                
+                var totalUnderPar = underPar / numRounds;
+                
+                document.getElementById("underPar").value = totalUnderPar;
+            }
+        </script>
+        <h3>Rory McIlroy won the British Open golf with a (4-round) score of 271, 17 under par!</h3>
+        <h4>Click here to find out the par for the course!</h4>
+        
+        <button onclick = "calculatePar()">Click here</button>
+        <br>
+        
+        <textarea id="totalPar" rows="1" cols="50" readonly></textarea>
+        
+        <h4>Click here to see his average score per round!</h4>
+        
+        <button onclick ="averageRound()">Click here </button>
+        <br>
+        
+        
+        <textarea id="average" rows="1" cols="50" readonly></textarea>
+        
+        
+        <h4>Click here to see how much he was under par per round!</h4>
+        
+        <button onclick = "calculateUnderPar()">Click here </button>
+        <br>
+        <textarea id="underPar" rows="1" cols="50" readonly></textarea>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Order</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            
+            function calculateCost()
+            {
+                //Assign the integer found at id getItemsOrdered to the variable items
+            var items = parseInt(document.getElementById("getItemsOrdered").value);
+            //acesss this document, find element at id costPerItem, retrieve its value, convert that value to a float
+            //Assign the converted value to the variable cost
+            var cost = parseFloat(document.getElementById("getCostPerItem").value);
+            
+            var totalCost = items * cost;
+            
+            if(totalCost >= 1000)
+            {
+                document.getElementById("outputArea").innerHTML = "your order with discount is: €" + (totalCost * 0.9).toFixed(2);
+            }
+            else
+            {
+                document.getElementById("outputArea").innerHTML = "your order is: €" + (totalCost).toFixed(2);
+            }
+            
+            }   
+            
+            
+        </script> 
+        <h1>Items ordered</h1>
+        <br><br>
+        
+         <input id ="getItemsOrdered"/>
+        <br><br>
+        
+        <h1>The cost per item</h1>
+        <br><br>
+        
+       
+        
+        <input id ="getCostPerItem"/>
+        <br><br>
+        
+       <button  onClick ="calculateCost()">Click here for the total price</button>
+        
+        
+        <h1 id ="outputArea">Total here </h1>
+    </body>
+</html>

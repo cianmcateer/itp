@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+get stones from user 
+convert stones to ounces
+get pounds from user
+convert pounds to ounces
+get ounces from user
+add together
+display result
+-->
+
+<html>
+    <head>
+        <title>Imperial</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+         "use strict";
+         
+         function imperialCalculator()
+         {
+             var stones = parseInt(document.getElementById("getStones").value);
+             
+             var pounds = parseInt(document.getElementById("getPounds").value);
+             
+             var ounces = parseInt(document.getElementById("getOunces").value);
+             
+             var convertStones = stones * 14 * 16;
+             
+             var convertPounds = pounds * 16;
+             
+             var total = convertStones + convertPounds + ounces;
+             
+             var output = "That converts to " + total + " ounces .";
+             
+             document.getElementById("totalOunces").value = output;
+         }
+        </script>
+        <h1>Please enter the stones, pounds and ounces into the boxes below.</h1>
+        
+        
+        <h3>Please enter your stones here.</h3>
+        <br>
+        
+        <input id = "getStones"/>
+        <br>
+        
+        <h3>Please enter your pounds here.</h3>
+        <br>
+        
+        <input id = "getPounds"/>
+        <br>
+        
+        <h3>Please enter your ounces here.</h3>
+        <br>
+        
+        <input id = "getOunces"/>
+        <br><br>
+        
+        
+        <button onclick ="imperialCalculator()"> calculate ounces </button>
+        
+        <h3>Total ounces remaining.</h3>
+        
+        <textarea id="totalOunces" rows="2" cols="60" readonly></textarea>
+    </body>
+</html>

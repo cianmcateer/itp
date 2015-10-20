@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+enter id
+add "@student.dkit.ie" at end of id
+display result
+-->
+<html>
+    <head>
+        <title>StudentID</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            function getEmail(){
+            
+            var id = document.getElementById("getId").value;
+            
+            var email = id + "@student.dkit.ie";
+            
+            alert("your email is " + email);
+        }
+        </script>
+        <h1>
+            Please type your ID.
+        </h1>
+        <button onclick ="getEmail()">Click here</button>
+        <input id ="getId"/>
+        
+    
+    </body>
+</html>

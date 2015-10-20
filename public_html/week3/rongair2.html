@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Rongair2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            function calcCost()
+            {
+                var ticket = document.getElementById("getTicket").value;
+                
+                var number = parseInt(document.getElementById("getTotal").value);
+                
+                var total;
+                
+                if(ticket==="London")
+                {
+                    total=23.20*number;
+                    total=total.toFixed(2);
+                }
+                else if(ticket==="Manchester")
+                {
+                  total=31.60*number; 
+                  total=total.toFixed(2);
+                }
+                else if(ticket==="Birmingham")
+                {
+                   total=37.50*number;
+                   total=total.toFixed(2);
+                }
+                else if(ticket==="Paris")
+                {
+                    total=45.80*number;
+                    total=total.toFixed(2);
+                    
+                }
+                else
+                {
+                    total="{Error: Invalid destination.}";
+                }
+                
+                var outputText="your ticket/s cost €" +total+" enjoy your stay in "+ticket+".";
+                
+                document.getElementById("totalCost").value=outputText;
+            }    
+                
+            
+        </script>
+        <h1>Ticket calculator</h1>
+        <br>
+        
+        <p>Please enter the number of tickets you require</p>
+        
+        <input id="getTicket"/>Enter location
+        <br>
+        <input id="getTotal"/>Enter number of tickets
+        <br>
+        
+        <button onClick="calcCost()">Click here</button>
+        
+        <textarea id="totalCost" rows="4" cols="50" readonly></textarea>
+    </body>
+</html>

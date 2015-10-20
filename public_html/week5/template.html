@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>
+          TITLE of page
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function displayDetails()
+            {
+                // Get Input from webpage
+                var       = parseInt(document.getElementById("get     ").value);
+                var      = parseFloat(document.getElementById("get    ").value);
+               
+                // Processing & Calculations
+                
+                
+                var outputText; 
+
+                // 1. Display Output on webpage (in a textarea element)
+                 document.getElementById("results").value = outputText;
+
+                // 2. Display output using alert box
+               // alert(outputText);
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        Please Enter below:
+        <br> <br>
+        Prompt#1:
+        <input id="get    " />
+        <br> <br>
+
+        Prompt#1:
+        <input id="get     " />
+        <br> <br>
+               
+        <button onclick="displayDetails()" >Click to see results below</button>
+        <br> <br>
+
+        Results:
+        <br>
+        <textarea id="results" rows="4" cols="50" readonly >
+        </textarea>
+
+    </body>
+</html>
+
+

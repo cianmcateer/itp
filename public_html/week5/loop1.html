@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>
+          loop1
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function displayDetails()
+           {
+                var name1 = document.getElementById("getName1").value;
+                var name2 = document.getElementById("getName2").value;
+                var i;
+                for (i = 1; i <= 100; i++)
+                {
+                    document.write(name1 + "\n");
+                    document.write(name2 + "\n");
+                }
+            } 
+        </script>
+    </head>
+
+    <body>
+        Please Enter below:
+        <br> <br>
+        Enter name1:
+        <input id="getName1"/>
+        <br> <br>
+
+        Enter name2:
+        <input id="getName2"/>
+        <br> <br>
+
+        <button onclick="displayDetails()">Click to see results</button>
+        <br> <br>
+
+
+
+    </body>
+</html>

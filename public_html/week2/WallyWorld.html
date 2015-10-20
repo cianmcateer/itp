@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Wally World</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            "use strict";
+            
+            function calcPrice()
+            {
+            var age = parseInt(document.getElementById("getTicket").value);
+            var outputText;
+            var price;
+            
+            if(age <= 16)
+            {
+                price = 10;
+            }
+            else 
+            {
+                price = 15;
+            }
+            outputText = "your ticket is " + price + " euros";
+            
+            document.getElementById("totalCost").value = outputText;
+            
+           
+            }
+        </script>
+        <h1>Wally world ticket system</h1>
+        <br><br>
+        
+        <h2>Please enter your age here</h2>
+        <br><br>
+        
+        <input id ="getTicket"/>
+        
+         <button onclick="calcPrice()">Click here</button>
+        <br><br>
+        Cost:
+        <br>
+        <textarea id="totalCost" rows="4" cols="50" readonly></textarea>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>
+          loop4a
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function displayDetails()
+            {
+                // Get Input from webpage
+                var num1 = parseInt(document.getElementById("getNum1").value);
+                var num2 = parseInt(document.getElementById("getNum2").value);
+                var outText = "";
+                var i;
+                // Processing & Calculations
+                
+                for (i = num1; i < num2 ; i = i + 1)
+                {
+                    outText = outText + i;
+                }
+                 
+
+                // 1. Display Output on webpage (in a textarea element)
+                 document.getElementById("results").value = outText;
+
+                // 2. Display output using alert box
+               // alert(outputText);
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        Please Enter below:
+        <br> <br>
+        Number#1:
+        <input id="getNum1"/>
+        <br> <br>
+
+        Number#2:
+        <input id="getNum2"/>
+        <br> <br>
+               
+        <button onclick="displayDetails()" >Click to see results below</button>
+        <br> <br>
+
+        Results:
+        <br>
+        <textarea id="results" rows="4" cols="50" readonly >
+        </textarea>
+
+    </body>
+</html>

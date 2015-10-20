@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            function calcSplit(){
+                var string = document.getElementById("getString").value;
+                
+                var split =  string.split("");
+                
+                var char1 = parseInt(split[0]);
+                var char2 = parseInt(split[1]);
+                var char3 = parseInt(split[2]);
+                var char4 = parseInt(split[3]);
+                var total = char1 + char2 + char3 + char4;
+                
+                
+                var output = char1 + "\n" + char2 + "\n" + char3 + "\n" + char4 + "\n" + "total = " + total;
+                
+                document.getElementById("splitOutput").value = output;
+            }
+        </script>
+        <h1>
+            Type four digit number here.
+        </h1>
+        <input id ="getString"/>
+        <br><br>
+        <button onclick ="calcSplit()">Click here</button>
+        <br><br>
+        <textarea id ="splitOutput" rows = 5></textarea>
+    </body>
+</html>

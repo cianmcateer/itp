@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>
+          
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function displayDetails()
+            {
+                // Get Input from webpage
+                var num = parseInt(document.getElementById("getNumber").value);
+                
+               
+                // Processing & Calculations
+                if (num === 1)
+                {
+                    outputText = "Monday";
+                }
+                else if (num === 2)
+                {
+                    outputText = "Tuesday";
+                }
+                else if (num === 3)
+                {
+                    outputText = "Wednesday";
+                }
+                else if (num === 4)
+                {
+                    outputText = "Thursday";
+                }
+                else if (num === 5)
+                {
+                    outputText = "Friday";
+                }
+                else if (num === 6)
+                {
+                    outputText = "Saturday";
+                }
+                else if (num === 7)
+                {
+                    outputText = "Sunday";
+                }
+                else
+                {
+                    outputText = "input error";
+                }
+                 
+                
+                var outputText; 
+
+                // 1. Display Output on webpage (in a textarea element)
+                 document.getElementById("results").value = outputText;
+
+                // 2. Display output using alert box
+               // alert(outputText);
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        Please Enter number below:
+        <br> <br>
+        Here:
+        <input id="getNumber"/>
+        <br> <br>
+
+        <button onclick="displayDetails()" >Click to see results below</button>
+        <br> <br>
+
+        Results:
+        <br>
+        <textarea id="results" rows="4" cols="50" readonly >
+        </textarea>
+
+    </body>
+</html>
+
+

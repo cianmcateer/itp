@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>
+          TITLE of page
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function processOrder()
+            {
+                // Get Input from webpage
+                var  type = document.getElementById("getType").value;
+                var  number =  parseInt(document.getElementById("getNumber").value);
+                var logo = document.getElementById("getLogo").value;
+                // Processing & Calculations
+                var outText; 
+                var cost;
+                
+                if (type === "polo")
+                {
+                    if (logo === "Y")
+                    {
+                        cost = number * 22.50 + (number * 1.50) + "Warning:Long shipping date";
+                    }
+                    else
+                    {
+                        cost = number * 22.50;
+                    }
+                }
+                else if (type === "short")
+                {
+                    cost = number * 25.50;
+                }
+                else
+                {
+                    cost = number * 28.50;
+                }
+                if (logo === "Y")
+                {
+                    cost = cost + (number * 1.50);
+                }
+                else
+                {
+                    cost = cost;
+                }
+                
+                
+                outText = "The cost of your jerseys is " + cost;
+
+                // 1. Display Output on webpage (in a textarea element)
+                 document.getElementById("results").value = outText;
+
+                // 2. Display output using alert box
+               // alert(outputText);
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        Please Enter below:
+        <br> <br>
+        Type:
+        <input id="getType"/>
+        <br> <br>
+
+        Number of jerseys:
+        <input id="getNumber"/>
+        <br> <br>
+        
+        Logo:
+        <input id="getLogo"/>
+        <br><br>
+               
+        <button onclick="processOrder()" >Click to see results below</button>
+        <br> <br>
+
+        Results:
+        <br>
+        <textarea id="results" rows="4" cols="50" readonly >
+        </textarea>
+
+    </body>
+</html>
+
+

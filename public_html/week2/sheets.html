@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Copy centre</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            "use strict";
+
+            function calcCost()
+            {
+                
+                var copies = parseInt(document.getElementById("getCopies").value);
+                
+                //var cost = parseFloat(document.getElementById("outputArea").value);
+
+                //var total = copies * cost;
+                
+                var total;
+              
+                if (copies < 100)
+                {
+                    total = copies * 0.05;
+                } 
+                else if(copies <= 200)
+                {
+                    total = 100*0.05 + (copies - 100) *0.04;
+                }
+                
+                else(copies > 200);
+                {
+                    total = 100*0.05 + (copies - 100) * 0.04 + (copies - 100) * 0.03;
+                }
+                 // alert("after if" + total);
+                  
+                var outputText = "Cost of copies " + total + " euros.";
+               // alert(outputText);
+                document.getElementById("totalCost").value = outputText;
+            }
+        </script>
+        <h1>Number of copies</h1>
+        <br><br>
+
+        <input id ="getCopies"/>
+        <br><br>
+
+        <button onclick="calcCost()">Calculate cost of copies</button>
+        <br><br>
+        Cost:
+        <br>
+        <textarea id="totalCost" rows="4" cols="50" readonly></textarea>
+
+        
+
+    </body>
+</html>

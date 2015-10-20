@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Age</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+         "use strict";
+         
+         function getStatus()
+         {
+             var age = parseInt(document.getElementById("getResult").value);
+             
+             var outputText;
+             
+             if(age<=12)
+             {
+              outputText="You are a child.";
+             }
+             else if(age<=17)
+             {
+             outputText="You are a teenager.";
+             }
+             else if (age<=64)
+             {
+             outputText ="You are an adult.";
+             }
+             else if (age>64)
+             {
+             outputText ="You are an OAP.";
+             }
+             document.getElementById("getAge").value=outputText;
+             }
+        </script>
+        
+        <h1>How old are you?</h1>
+        <br><br>
+        
+        <h2>Please enter your age below.</h2>
+        <br><br>
+        
+        <input id ="getResult"/>
+      
+        <button onClick ="getStatus()">Click here</button>
+        
+        <textarea id="getAge" rows="4" cols="50" readonly></textarea>
+            
+    </body>
+</html>

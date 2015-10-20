@@ -1,0 +1,46 @@
+  <title>
+          loop5
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function displayDetails()
+            {
+                var outText = "";
+                var i;
+                
+                // Processing & Calculations
+                for (i = 1; i <= 100; i = i + 1)
+                {    
+                    if (i % 2 === 0)
+                    {
+                        outText = outText + i + " Even number" + "\n";  
+                    }
+                    else
+                    {
+                        outText = outText + i + " Odd number" + "\n"; 
+                    }
+                }
+                document.getElementById("results").value = outText;  
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        <button onclick="displayDetails()" >Click to see results below</button>
+        <br> <br>
+
+        Results:
+        <br>
+        <textarea id="results" rows="4" cols="50" readonly >
+        </textarea>
+
+    </body>
+</html>
+
+

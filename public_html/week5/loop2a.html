@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>
+          loop2a
+        </title>
+
+        <style  type="text/css">
+        </style>
+
+        <script>
+            "use strict";
+
+            function displayDetails()
+            {
+                var outText = "";
+                var i;
+                
+                // Processing & Calculations
+                for (i = 0; i <= 77; i = i + 1)
+                {
+                    outText = outText + i + "\n";    
+                }
+                document.getElementById("results").value = outText;  
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        <h1>0 to 77 loop</h1>
+        <button onclick="displayDetails()" >Click to see results below</button>
+        <br> <br>
+
+        Results:
+        <br>
+        <textarea id="results" rows="4" cols="50" readonly >
+        </textarea>
+
+    </body>
+</html>
+
+
