@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
 
         <title>
-          TITLE of page
+          Ca2redob
         </title>
 
         <style  type="text/css">
@@ -21,8 +21,8 @@
                 var  number =  parseInt(document.getElementById("getNumber").value);
                 var logo = document.getElementById("getLogo").value;
                 // Processing & Calculations
-                var outText = "The cost of your jerseys is "; 
                 var cost;
+                var outText;
                 
                 
                 
@@ -34,9 +34,13 @@
                 {
                     cost = number * 25.50;
                 }
-                else
+                else if (type === "long")
                 {
                     cost = number * 28.50;
+                }
+                else
+                {
+                    cost = "Error";
                 }
                 
                 if (logo === "Y")
@@ -45,7 +49,7 @@
                 }
                 else
                 {
-                    cost = cost;
+                    cost;
                 }
                 
                 if (cost > 250)
@@ -60,12 +64,13 @@
                 
                 if (cost > 100 && cost < 500)
                 {
-                    outText = outText + cost;
+                    outText = "thats " + "" + number + " " + type  + " @ " + cost + " euros.";
                 }
                 else
                 {
-                    outText = "Invalid selection: Orders must be between 100 and 500";
+                    outText = "Invalid selection";
                 }
+                
          
                 // 1. Display Output on webpage (in a textarea element)
                  document.getElementById("results").value = outText;

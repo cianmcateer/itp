@@ -20,14 +20,15 @@
                 var num2 = parseInt(document.getElementById("getNum2").value);
                 var outText = "";
                 var i;
+                var sum = 0;
                 // Processing & Calculations
                 
                 for (i = num1; i < num2 ; i = i + 1)
                 {
-                    outText = outText + i;
+                    sum = sum + i;
                 }
                  
-
+outText = "   " + sum;
                 // 1. Display Output on webpage (in a textarea element)
                  document.getElementById("results").value = outText;
 
